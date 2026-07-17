@@ -1,0 +1,111 @@
+:root {
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --accent-color: #2b6cb0;
+  --header-bg: #1a365d;
+  --header-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.site-header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 40px 20px; /* padding */
+  border-bottom: 5px solid var(--accent-color); /* border */
+  margin-bottom: 30px; /* margin */
+}
+
+.site-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.site-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.productos {
+  max-width: 1200px;
+  margin: 0 auto 40px; /* margin */
+  padding: 20px; /* padding */
+  display: flex; /* display: flex */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.producto {
+  background-color: var(--card-bg);
+  width: 270px; /* width */
+  padding: 20px; /* padding */
+  border: 1px solid #e2e8f0; /* border */
+  border-radius: 12px; /* border-radius */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* box-shadow */
+  display: flex; /* display: flex */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%; /* width */
+  height: 200px; /* height */
+  object-fit: cover;
+  border-radius: 8px; /* border-radius */
+  margin-bottom: 15px; /* margin */
+  border: 1px solid #edf2f7; /* border */
+}
+
+.producto h3 {
+  margin: 0 0 10px 0; /* margin */
+  color: var(--text-main);
+  font-size: 1.3rem;
+}
+
+.producto p {
+  margin: 0 0 20px 0; /* margin */
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1; /* Pushes the price to the bottom */
+}
+
+.precio {
+  display: inline-block; /* display: inline-block */
+  background-color: var(--accent-color);
+  color: white;
+  padding: 10px 20px; /* padding */
+  border-radius: 25px; /* border-radius */
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 100%; /* width */
+}
+
+.site-footer {
+  text-align: center;
+  padding: 25px; /* padding */
+  background-color: #e2e8f0;
+  color: #4a5568;
+  border-top: 1px solid #cbd5e0; /* border */
+}
